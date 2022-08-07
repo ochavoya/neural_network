@@ -80,9 +80,7 @@ public class FeedForwardNetwork implements Serializable {
         }
         ++sampleCounter;
     }
-    
-
-    
+        
     public void reset(){
         for(Neuron n:list){
             n.reset();
