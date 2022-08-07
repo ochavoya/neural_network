@@ -42,7 +42,6 @@ public class ImageNetwork implements Serializable {
         blueNetwork  = new FeedForwardNetwork(nNeuron);
     }
     
-        
     private int getRed(int rgb){
         return (rgb >> 16) & 0xff;
     }
@@ -61,9 +60,7 @@ public class ImageNetwork implements Serializable {
         blueNetwork.reset();
     }
     
-    
-    private double commit(double alpha){
-        
+    private double commit(double alpha){   
         double redError;
         double greenError;
         double blueError;
@@ -75,8 +72,6 @@ public class ImageNetwork implements Serializable {
         error = Math.max(error, blueError);
         return error;
     }
-    
-    
     
     private double train(double alpha,double maxError){
         int rgb;
@@ -106,8 +101,7 @@ public class ImageNetwork implements Serializable {
          while( counter < (long) inputWidth * inputHeight );
         return error/counter;
     }
-    
-    
+
     private int correct(int color){
         color = color < 0 ? 0 :color;
         color = color > 255 ? 255 :color;
