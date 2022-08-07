@@ -9,9 +9,6 @@ import javax.imageio.ImageIO;
 import com.ochavoya.neural_net.FeedForwardNetwork;
 
 public class ImageNetwork implements Serializable {
-    /**
-     * 
-    */
     
     private static final long serialVersionUID = 1L;
     private int    inputWidth;
